@@ -13,7 +13,7 @@ Check out the quick start example in `./examples/`. Don't see an example you thi
 
 ## Usage
 
-```
+```js
 const { Thynogger: thynogger } = require("thynogger");
 
 thynogger.info("User payload received");
@@ -31,5 +31,27 @@ thynogger.warn("Warning message");
 thynogger.debug("Debug message", { data: { message: "some warning" } });
 thynogger.debug("Debug message");
 ```
+output:
 
 ![output](https://github.com/krisalay/thynogger/blob/develop/examples/output.png)
+
+## Envionment variables and defaults
+**LOG_LEVEL**
+Logging levels in `thynogger` conform to the severity ordering specified by
+[RFC5424]: _severity of all levels is assumed to be numerically **ascending**
+from most important to least important._ The default log level is set to **info**.
+
+``` js
+const levels = { 
+  error: 0,
+  warn: 1,
+  info: 2,
+  http: 3,
+  verbose: 4,
+  debug: 5,
+  silly: 6
+};
+```
+
+**NODE_ENV**
+The default value for the environment set in `thynogger` is **development**.
