@@ -1,33 +1,35 @@
 # thynogger
 
-## Table of Contents
-+ [About](#about)
-+ [Getting Started](#getting_started)
-+ [Usage](#usage)
-+ [Contributing](./CONTRIBUTING.md)
+A simple and easy to use logging package for better readability in the consoles or terminals. The terminal/console logs can be piped into the file and converted into the CSV file by changing the delimiter to pipe ( | ) symbol.
 
-## About <a name = "about"></a>
-Write about 1-2 paragraphs describing the purpose of your project.
+## Motivation
+`thynogger` is designed to be simple logging library with better readability in the terminals. Each   `thynogger` logger can be configured at different levels using the `LOG_LEVEL` environment variable.
 
-## Getting Started <a name = "getting_started"></a>
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+`thynogger` aims to provide the simple and uni-directional solution to the logging in servers. The logging format is fixed but it provides the flexibility in choosing the levels of the log.
 
-### Prerequisites
+## Quick Start
 
-What things you need to install the software and how to install them.
+Check out the quick start example in `./examples/`. Don't see an example you think should be there? Submit a pull request to add it.
 
+## Usage
 
-### Installing
+```
+const { Thynogger: thynogger } = require("thynogger");
 
-A step by step series of examples that tell you how to get a development env running.
+thynogger.info("User payload received");
+thynogger.info("Invalid user payload", { data: { user_id: 1 } });
 
-Say what the step will be
+const  e  =  new  Error("Test error");
+thynogger.error("Something went wrong", { error: e, data: {  user_id: 1 } });
+thynogger.error("Something went wrong", {  error:  e });
+thynogger.error("Something went wrong", { data: { user_id: 1 } });
+thynogger.error("Something went wrong", { error: e, data: { user_id:  1 } });
 
-And repeat
+thynogger.warn("Warning message", { data: { message: "some warning" } });
+thynogger.warn("Warning message");
 
+thynogger.debug("Debug message", { data: { message: "some warning" } });
+thynogger.debug("Debug message");
+```
 
-End with an example of getting some data out of the system or using it for a little demo.
-
-## Usage <a name = "usage"></a>
-
-Add notes about how to use the system.
+![output](https://github.com/krisalay/thynogger/blob/develop/examples/output.png)
