@@ -4,7 +4,7 @@ A simple and easy to use logging package for better readability in the consoles 
 
 <p><a href="https://nodejs.org/en/"><img src="https://badgen.net/badge/Made%20With/NodeJs,Typescript?scale=1.5&list=|" /></a></p>
 
-<p><a href="https://github.com/krisalay/thynogger/actions?query=workflow%3ABuild"><img src="https://github.com/krisalay/thynogger/workflows/Build/badge.svg">
+<p><a href="https://github.com/krisalay/thynogger/actions?query=workflow%3ABuild"><img src="https://github.com/krisalay/thynogger/workflows/Build/badge.svg"></a></p>
 
 ## Motivation
 `thynogger` is designed to be simple logging library with better readability in the terminals. Each   `thynogger` logger can be configured at different levels using the `LOG_LEVEL` environment variable.
