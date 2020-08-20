@@ -37,6 +37,7 @@ output:
 
 ## Envionment variables and defaults
 **LOG_LEVEL**
+
 Logging levels in `thynogger` conform to the severity ordering specified by
 [RFC5424]: _severity of all levels is assumed to be numerically **ascending**
 from most important to least important._ The default log level is set to **info**.
@@ -54,4 +55,24 @@ const levels = {
 ```
 
 **NODE_ENV**
+
 The default value for the environment set in `thynogger` is **development**.
+
+## Installation
+
+```
+npm install thynogger
+```
+```
+yarn add thynogger
+```
+
+## Run Tests
+
+All of the winston tests are written with [`jest`](https://jestjs.io/).
+They can be run with `npm`.
+```
+npm test
+```
+
+#### Author:  [krisalay](https://github.com/krisalay)
