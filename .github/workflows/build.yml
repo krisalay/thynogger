@@ -8,14 +8,12 @@ on:
     branches:
       - master
       - develop
-      - release/*
     tags:
       - v*
   pull_request:
     branches:
       - master
       - develop
-      - release/*
 
 jobs:
   build:

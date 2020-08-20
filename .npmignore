@@ -5,10 +5,9 @@ tests
 .env
 jest*
 tsconfig.json
-node_modules
 coverage
 dist
 lib
 *.csv
 test.js
-    
+.github
