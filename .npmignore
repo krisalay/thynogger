@@ -1,0 +1,13 @@
+examples
+src
+tests
+.editorconfig
+.env
+jest*
+tsconfig.json
+coverage
+dist
+lib
+*.csv
+test.js
+.github
