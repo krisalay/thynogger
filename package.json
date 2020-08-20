@@ -1,6 +1,13 @@
 {
   "name": "thynogger",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=0.10.3 <=0.12"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
   "description": "Thynogger is a logging utility used to log contents in the terminal for easy readibility",
   "keywords": [
     "logger",
