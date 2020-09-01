@@ -73,7 +73,7 @@ yarn add thynogger
 
 ## Run Tests
 
-All of the winston tests are written with [`jest`](https://jestjs.io/).
+All of the `thynogger` tests are written with [`jest`](https://jestjs.io/).
 They can be run with `npm`.
 ```
 npm test
