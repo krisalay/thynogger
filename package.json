@@ -1,6 +1,6 @@
 {
   "name": "thynogger",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "engines": {
     "node": ">=0.10.3 <=0.12"
   },
@@ -23,7 +23,7 @@
     "lint": "./node_modules/.bin/eslint . --ext .ts",
     "lint-and-fix": "./node_modules/.bin/eslint . --ext .ts --fix",
     "prettier-format": "./node_modules/.bin/prettier --config .prettierrc 'src/**/*.ts' --write",
-    "build": "./node_modules/.bin/tsc",
+    "build": "./node_modules/.bin/tsc --declaration",
     "start": "node .",
     "test": "./node_modules/.bin/jest --coverage --detectOpenHandles --forceExit --runInBand --verbose",
     "clean:some": "rm -rf ./lib ./docs",
@@ -31,6 +31,7 @@
     "refresh": "npm run clean:all && npm install"
   },
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "husky": {
     "hooks": {
       "pre-commit": "npm run prettier-format && npm run lint"
